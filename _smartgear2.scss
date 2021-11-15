@@ -1,3 +1,4 @@
+$z_header: 100 !default;
 #wrapper {min-height: 100vh; @include flex-container(column);
   &>#footer { padding: $spacing; margin-bottom: 0; z-index: $z_header - 1;
     box-shadow: 0 -5px 10px rgba(0,0,0,.1), inset 0 0 30px rgba(0,0,0,.06);
