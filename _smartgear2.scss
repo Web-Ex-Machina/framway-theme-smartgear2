@@ -11,7 +11,8 @@ $z_header: 100 !default;
 #guideline{@extend .force-full,.counter-y;
   & .content{height: auto; min-height: 100vh; overflow: visible;}
 }
-body.home .heroFW{ @extend .counter-y;
+body.home .heroFW{ 
+  // @extend .counter-y;
   // & .heroFW__content{@include media-min(md){padding: 20vw;}}
 }
 
@@ -39,7 +40,6 @@ body.home .heroFW{ @extend .counter-y;
 .mod_article{padding: $spacing 0;
   @include media-max(xs){padding: $spacing/2 0;}
 }
-.mod_article>.heroFW:first-child{@extend .counter-top;}
 
 // BLOCK-LIST - DEFAULT
 .block-list{flex-basis: 33.33%; flex-grow: 1; max-width: 100%; order: 1;  margin-bottom: 0;

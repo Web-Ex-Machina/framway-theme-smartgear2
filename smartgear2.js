@@ -7,7 +7,7 @@
 $(function () {
   // INIT
     $(window).resize(function () {
-        $('body.home .heroFW').css('height',viewport.height - $('#header').outerHeight());
+        // $('body.home .heroFW').css('height',viewport.height - $('#header').outerHeight());
 
         if ($('.mod_faqpage .accordionFW').length) {
             resizeFAQ();
