@@ -254,7 +254,7 @@ ol, p, ul{margin-bottom: 1rem;}
 .float_left{float: left;}
 
 .ce_text{clear: both;}
-.ce_text[class*="bg-"]{@extend .block-std;
+.ce_text[class*="bg-"]{@extend .block-std !optional;
   @each $key, $value in $colors{
     &.bg-#{$key}{background-color: $value;}
   }
