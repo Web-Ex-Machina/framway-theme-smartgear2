@@ -232,7 +232,7 @@ table.calendar{margin-bottom: $spacing;
 }
 
 // MEP
-@for $index from 0 through 6{
+@for $index from 1 through 6{
   h#{$index},
   .h#{$index}{
     @each $key, $value in $colors{
