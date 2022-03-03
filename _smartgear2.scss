@@ -20,6 +20,59 @@ body.home .heroFW{
 
 .loader{position: absolute; top: 0;bottom: 0;left: 0;right: 0; color: rgba(body(font-color),0.6); background-color: rgba(color(white),0.6); z-index: 10; @include flex-container(row,wrap,center,center); font-size: 3rem;}
 
+// MEP
+@for $index from 1 through 6{
+  h#{$index},
+  .h#{$index}{
+    @each $key, $value in $colors{
+      &.ft-#{$key},
+      .ft-#{$key} &:not([class*="ft-"]){color: $value;}
+    }
+  }
+}
+
+@each $key, $value in $colors{
+  a.ft-#{$key}:not([class*=btn]),
+  .ft-#{$key} a:not([class*=btn]){color: $value;
+    &:hover{color: $value;}
+  }
+}
+
+ol, p, ul{margin-bottom: 1rem;}
+.float_right{float: right;}
+.float_left{float: left;}
+
+.ce_text{clear: both;}
+.ce_text[class*="bg-"]{@extend .block-std !optional;
+  @each $key, $value in $colors{
+    &.bg-#{$key}{background-color: $value;}
+  }
+}
+
+figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
+.img-container figcaption{position: absolute; bottom: 0;width: 100%;text-align: center; background: rgba($primary,0.3);color: white; text-shadow: 1px 1px 5px rgba(0,0,0,0.9); }
+
+// figure img{width: 100%;}
+.ce_text figure{
+  &.float_right,
+  &.float_left{ margin: 0 1rem 1rem 0;
+    @include media-max(xs){margin: 0 0 1rem; width: 100%;
+      figcaption{text-align: left;}
+    }
+  }
+  &.float_right{ margin: 0 0 1rem 1rem;}
+}
+
+.mod_article{margin-bottom: $spacing; padding: $spacing 0;
+  @include media-max(xs){margin-bottom: $spacing/2;padding: $spacing/2 0;}
+  .modalFW &.first{padding-top: 0;}
+  .modalFW &.last{padding-bottom: 0;}
+  &>*:last-child{margin-bottom: 0;}
+  &:last-child{margin-bottom: 0;}
+}
+[class*=bg-]:not([class*=bg--]):not([class*=btn-]) .ce_text:last-child>p:last-child{margin-bottom: 0;}
+
+
 // HEADER
 .headerFW .headerFW__headbanner #logo{margin-bottom: 0; display: flex; align-items: center;padding: 0.5rem; height: 100%;
   & img{display: block;}
@@ -36,9 +89,14 @@ body.home .heroFW{
 }
 
 
-// MOD_ARTICLE
-.mod_article{padding: $spacing 0;
-  @include media-max(xs){padding: $spacing/2 0;}
+// INPUTS
+div.widget{@extend .form-group !optional;}
+
+// GRIDS
+.d-grid{}
+.item-grid{
+  &>*:last-child{margin-bottom: 0 !important;}
+  & .block-list{height: 100%;}
 }
 
 // BLOCK-LIST - DEFAULT
@@ -231,64 +289,33 @@ table.calendar{margin-bottom: $spacing;
   & path[fill="#f12323"]{cursor: pointer;}
 }
 
-// MEP
-@for $index from 1 through 6{
-  h#{$index},
-  .h#{$index}{
-    @each $key, $value in $colors{
-      &.ft-#{$key},
-      .ft-#{$key} &:not([class*="ft-"]){color: $value;}
+
+// CONTAO-JOB-OFFERS
+.job{}
+.job__title{}
+.job__location{opacity: 0.6; margin-bottom: 1.5em; margin-top: 1.5em;}
+.job__location__icon{margin-right: 0.25em; font-size: 1.25em;}
+.job__teaser{}
+.job__attributes{@extend .d-grid,.cols-3,.cols-xs-1,.p-y !optional;
+  .job_default &{@extend .p-x !optional;}
+}
+.job__attribute{
+  .job_default &{@extend .p-x !optional;}
+}
+.job__attribute__title{font-size: 1.2em; margin-bottom: 0.35em; white-space: nowrap;}
+.job__attribute__value{opacity: 0.6;}
+.job__footer{@extend .counter-bottom,.counter-right !optional; display: flex; justify-content: flex-end; padding: 0 1.45em .75em;}
+.job__more{font-size: 2em; opacity: 0.4; transition: opacity 0.4s; cursor: pointer; color: $primary;
+  &:hover{opacity: 0.8;}
+}
+
+
+// mod_listing
+.mod_listing{
+  .list_search{
+    .input-group{
+      .select2FW-wrapper{min-width: 150px;}
+      >input[type=text]{flex-grow: 3;}
     }
   }
-}
-
-@each $key, $value in $colors{
-  a.ft-#{$key}:not([class*=btn]),
-  .ft-#{$key} a:not([class*=btn]){color: $value;
-    &:hover{color: $value;}
-  }
-}
-
-ol, p, ul{margin-bottom: 1rem;}
-.float_right{float: right;}
-.float_left{float: left;}
-
-.ce_text{clear: both;}
-.ce_text[class*="bg-"]{@extend .block-std !optional;
-  @each $key, $value in $colors{
-    &.bg-#{$key}{background-color: $value;}
-  }
-}
-
-figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
-.img-container figcaption{position: absolute; bottom: 0;width: 100%;text-align: center; background: rgba($primary,0.3);color: white; text-shadow: 1px 1px 5px rgba(0,0,0,0.9); }
-
-// figure img{width: 100%;}
-.ce_text figure{
-  &.float_right,
-  &.float_left{ margin: 0 1rem 1rem 0;
-    @include media-max(xs){margin: 0 0 1rem; width: 100%;
-      figcaption{text-align: left;}
-    }
-  }
-  &.float_right{ margin: 0 0 1rem 1rem;}
-}
-
-.mod_article{margin-bottom: $spacing;
-  @include media-max(xs){margin-bottom: $spacing/2;}
-  .modalFW &.first{padding-top: 0;}
-  .modalFW &.last{padding-bottom: 0;}
-  &>*:last-child{margin-bottom: 0;}
-  &:last-child{margin-bottom: 0;}
-}
-[class*=bg-]:not([class*=bg--]):not([class*=btn-]) .ce_text:last-child>p:last-child{margin-bottom: 0;}
-
-// INPUTS
-div.widget{@extend .form-group !optional;}
-
-// GRIDS
-.d-grid{}
-.item-grid{
-  &>*:last-child{margin-bottom: 0 !important;}
-  & .block-list{height: 100%;}
 }
