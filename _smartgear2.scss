@@ -45,7 +45,8 @@ ol, p, ul{margin-bottom: 1rem;}
 figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
 .img-container figcaption{position: absolute; bottom: 0;width: 100%;text-align: center; background: rgba($primary,0.3);color: white; text-shadow: 1px 1px 5px rgba(0,0,0,0.9); }
 
-// figure img{width: 100%;}
+.ce_image figure,
+.ce_youtube figure{margin: 0; height: 100%; width: 100%;}
 .ce_text figure{
   &.float_right,
   &.float_left{ margin: 0 1rem 1rem 0;
@@ -249,6 +250,7 @@ table.calendar{margin-bottom: $spacing;
   @include media-max(xxs){width: 2rem; height: 2rem;}
 }
 .quote{margin-bottom: 1rem;
+  p:before{display: none;}
   @include media-max(xxs){font-size:0.9rem;}
 }
 
