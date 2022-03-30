@@ -82,7 +82,6 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
   }
 }
 
-
 // INPUTS
 div.widget{@extend .form-group !optional;}
 
@@ -226,6 +225,14 @@ table.calendar{margin-bottom: $spacing;
     }
     & .reduced+.toggler{display: block;}
 
+  }
+}
+
+// BREADCRUMB
+.mod_breadcrumb{ 
+  ul{@extend .reset; display: flex;
+    li{white-space: nowrap; min-width: 5ch; @include ellipsis();}
+    li:not(:first-child):before{content:">"; display: inline-block;margin-left: 0.5em; margin-right: 0.5em; font-family: monospace; font-weight: 300;}
   }
 }
 
