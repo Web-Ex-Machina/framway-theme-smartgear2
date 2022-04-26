@@ -45,6 +45,11 @@ $(function () {
         }).open();
       }
     });
+
+    // encapsulate iframe in 16:9 box
+    $('.mod_article iframe:not(.custom)').each(function(){
+        $(this).wrapAll('<div class="img-container r_16-9"></div>');
+    });
 });
 
 var toggleCalendarEventView = function toggleCalendarEventView()
