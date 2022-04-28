@@ -35,7 +35,17 @@ ol, p, ul{margin-bottom: 1rem;}
 .float_right{float: right;}
 .float_left{float: left;}
 
-.ce_text{clear: both;}
+.ce_text{clear: both;
+  .ce_text+&{
+    @for $index from 1 through 6{
+      h#{$index}, .h#{$index}{
+        &:first-child{
+          margin-top: body(line-height)*1em;
+        }
+      }
+    }
+  }
+}
 .ce_text[class*="bg-"]{@extend .block-std !optional;
   @each $key, $value in $colors{
     &.bg-#{$key}{background-color: $value;}
