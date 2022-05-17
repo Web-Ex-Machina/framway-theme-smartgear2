@@ -174,7 +174,6 @@ div.widget{@extend .form-group !optional;}
 
 // FOOTER
 #footer { padding: $spacing/2; margin-bottom: 0; z-index: $z_header - 1;
-    box-shadow: 0 -5px 10px rgba(0,0,0,.1), inset 0 0 30px rgba(0,0,0,.06);
     @if footer(background){background-color: footer(background); }
     @if footer(font-color){color: footer(font-color); }
     @if footer(font-size){font-size: footer(font-size); }
