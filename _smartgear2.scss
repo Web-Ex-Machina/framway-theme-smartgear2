@@ -141,6 +141,17 @@ div.widget{@extend .form-group !optional;}
   }
 }
 
+// NEWSLIST
+.mod_newslist{
+  &:not(.d-grid){display: flex;flex-wrap: wrap;}
+  .block-card{
+    margin-left: $spacing*0.5;
+    margin-right: $spacing*0.5;
+    padding: 0;
+  }
+  .block-card__title{@extend .h2;}
+}
+
 // FAQ
 .mod_faqpage{
   & article>h2{margin-bottom: 1rem;}
