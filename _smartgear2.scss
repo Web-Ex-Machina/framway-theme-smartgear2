@@ -143,10 +143,13 @@ div.widget{@extend .form-group !optional;}
 
 // NEWSLIST
 .mod_newslist{
-  &:not(.d-grid){display: flex;flex-wrap: wrap;}
+  &:not(.d-grid){display: flex;flex-wrap: wrap;
+    .block-card{
+      margin-left: $spacing*0.5;
+      margin-right: $spacing*0.5;
+    }
+  }
   .block-card{
-    margin-left: $spacing*0.5;
-    margin-right: $spacing*0.5;
     padding: 0;
   }
   .block-card__title{@extend .h2;}
