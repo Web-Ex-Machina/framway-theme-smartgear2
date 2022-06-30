@@ -416,3 +416,15 @@ table.calendar{margin-bottom: $spacing;
   .block-icon__text{ font-size: 0.9rem; margin: 2rem auto; padding-bottom: 2rem; max-width: 220px; @include lastChildNoMargin(); }
   a{color:inherit;text-decoration: none;}
 }
+
+
+// RATINGS
+.ce_rsce_ratings{}
+.rating{ margin-bottom: $spacing; 
+  @include media-max(xs){margin-bottom: $spacing/2;}
+}
+.rating__label{margin-bottom: 0.25em;}
+.rating__icons{font-size: 1.5em; margin: 0 -2px;
+  i[class*=fa]{ margin: 0 2px;}
+}
+.rating__text{margin-top: 0.35em;  @include lastChildNoMargin(); }
