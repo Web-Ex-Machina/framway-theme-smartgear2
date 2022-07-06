@@ -428,3 +428,9 @@ table.calendar{margin-bottom: $spacing;
   i[class*=fa]{ margin: 0 2px;}
 }
 .rating__text{margin-top: 0.35em;  @include lastChildNoMargin(); }
+
+// PDF VIEWER
+.ce_rsce_pdfViewer{}
+.pdfviewer__iframe{
+  +*{margin-top: 1em;}
+}
