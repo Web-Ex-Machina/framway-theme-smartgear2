@@ -85,7 +85,7 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
   @include media-max(xxs){ }
 }
 
-.headerFW .headerFW__nav .headerFW__nav__toggler{
+.headerFW__nav__toggler{
   @include media-max(xs){margin: auto 1rem; };
   @media (max-width: 370px) {width: 40px; height: 58px;
     & .bar:first-child{top: 16px;}
