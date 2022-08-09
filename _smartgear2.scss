@@ -178,7 +178,7 @@ div.widget{@extend .form-group !optional;}
 }
 
 // FOOTER
-#footer { padding: $spacing/2; margin-bottom: 0; z-index: $z_header - 1;
+#footer { padding: $spacing/2; margin-bottom: 0; z-index: $z_header - 2;
     @if footer(background){background-color: footer(background); }
     @if footer(font-color){color: footer(font-color); }
     @if footer(font-size){font-size: footer(font-size); }
