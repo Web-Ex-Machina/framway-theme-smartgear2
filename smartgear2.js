@@ -15,8 +15,7 @@ $(function () {
         if ($('table.calendar').length) {
             toggleCalendarEventView();
         }
-    })
-    // .trigger('resize');
+    });
 
     $('.mod_wem_locations_map').attr('id','mapWrapper');
 
