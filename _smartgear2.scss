@@ -79,19 +79,23 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
 
 
 // HEADER
-.headerFW .headerFW__headbanner #logo{margin-bottom: 0; display: flex; align-items: center;padding: 0.5rem; height: 100%;
-  & img{display: block;}
-  @include media-max(xs){  }
-  @include media-max(xxs){ }
+.headerFW{}
+.headerFW__nav__wrapper{
+  >.mod_navigation{@extend .headerFW__nav__inline !optional;}
 }
+// .headerFW .headerFW__headbanner #logo{margin-bottom: 0; display: flex; align-items: center;padding: 0.5rem; height: 100%;
+//   & img{display: block;}
+//   @include media-max(xs){  }
+//   @include media-max(xxs){ }
+// }
 
-.headerFW__nav__toggler{
-  @include media-max(xs){margin: auto 1rem; };
-  @media (max-width: 370px) {width: 40px; height: 58px;
-    & .bar:first-child{top: 16px;}
-    & .bar:last-child{top: 40px;}
-  }
-}
+// .headerFW__nav__toggler{
+//   @include media-max(xs){margin: auto 1rem; };
+//   @media (max-width: 370px) {width: 40px; height: 58px;
+//     & .bar:first-child{top: 16px;}
+//     & .bar:last-child{top: 40px;}
+//   }
+// }
 
 // INPUTS - FORMS
 div.widget{@extend .form-group !optional;}
