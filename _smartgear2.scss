@@ -78,6 +78,11 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
 [class*=bg-]:not([class*=bg--]):not([class*=btn-]) .ce_text:last-child>p:last-child{margin-bottom: 0;}
 
 
+.ce_downloads{
+  ul{@extend .reset !optional;}
+}
+
+
 // HEADER
 .headerFW{}
 .headerFW__nav__wrapper{
