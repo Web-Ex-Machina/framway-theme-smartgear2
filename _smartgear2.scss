@@ -170,21 +170,8 @@ div.widget{@extend .form-group !optional;}
 
 // FAQ
 .mod_faqpage{
-  & article>h2{margin-bottom: 1rem;}
-  & .accordionFW{background-color: transparent; box-shadow: none;}
-  & .accordionFW__item{ border: 0; margin-bottom: 1rem;
-    & .accordionFW__title{background-color: color(white);@extend %paper; float: left; padding: .6rem 0 .6rem 1rem; transition: margin 0.4s; @include flex-container(row,nowrap,space-between,center); max-width: 100%;
-      @include media-max(xxs){font-size: 1em;}
-      &:after{right: auto; top: auto; margin: 0 1.2rem; @include size(1rem); margin-top: -0.5rem; position: relative; flex-shrink: 0;}
-    }
-    & .accordionFW__content{background-color: none; box-shadow: none; float: right; clear: both; max-width: 80%; transition: all 0.4s; left:50%; opacity: 0; visibility: hidden;
-      @include media-max(sm){max-width: 100%;};
-      & .accordionFW__content__wrapper{padding: 1.5rem 2rem 1.5rem;}
-    }
-    &.active{
-      & .accordionFW__title{margin-bottom: 1rem;}
-      & .accordionFW__content{visibility: visible; opacity: 1; left: 0;}
-    }
+  article+article{margin-top: 6em;
+    @include media-max(sm){margin-top: 4em;}
   }
 }
 
