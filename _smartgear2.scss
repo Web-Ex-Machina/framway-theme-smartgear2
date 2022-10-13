@@ -189,7 +189,9 @@ div.widget{@extend .form-group !optional;}
 }
 
 //MOD_CALENDAR
-.mod_calendar{position: relative;}
+.mod_calendar{position: relative; max-width: 85vh;
+  +*{margin-top: 1em;}
+}
 .calendar__event{font-size: 0.8em;margin: 0.25rem 0; border-radius: $radius; padding: 0.35rem; box-shadow: 1px 1px 2px rgba(#000, 0.5); max-width: 100%; width: 100%;  position: relative; overflow: hidden; line-height: 1.2; flex-shrink: 0; transition: all 0.4s; cursor: pointer;
   & a{color: inherit; text-decoration: none; display: block;}
   & span{overflow: hidden; text-overflow: ellipsis; display: block;max-width: 100%;}
@@ -199,7 +201,7 @@ div.widget{@extend .form-group !optional;}
     & p.back{pointer-events:none; display: none;}
   }
 }
-table.calendar{margin-bottom: $spacing;
+table.calendar{ table-layout: fixed;
   & tbody{display: block;padding: 0.25rem;}
   & tr{display: flex;}
   & td, & th{flex-grow: 1;flex-basis: 0; max-width: 100%; width: 100%; min-height: 1px; position: relative;
