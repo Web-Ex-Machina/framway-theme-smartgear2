@@ -88,19 +88,24 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
 .headerFW__nav__wrapper{
   >.mod_navigation{@extend .headerFW__nav__inline !optional;}
 }
-// .headerFW .headerFW__headbanner #logo{margin-bottom: 0; display: flex; align-items: center;padding: 0.5rem; height: 100%;
-//   & img{display: block;}
-//   @include media-max(xs){  }
-//   @include media-max(xxs){ }
-// }
 
-// .headerFW__nav__toggler{
-//   @include media-max(xs){margin: auto 1rem; };
-//   @media (max-width: 370px) {width: 40px; height: 58px;
-//     & .bar:first-child{top: 16px;}
-//     & .bar:last-child{top: 40px;}
-//   }
-// }
+// FOOTER
+#footer { padding: $spacing/2; margin-bottom: 0; z-index: $z_header - 2;
+    @if footer(background){background-color: footer(background); }
+    @if footer(font-color){color: footer(font-color); }
+    @if footer(font-size){font-size: footer(font-size); }
+  }
+.footer__copyright{text-align: center;}
+.footer__nav{ margin: 0.5rem 1rem; flex-grow: 1;
+  & ul{@extend .reset;}
+  & a {color: inherit; text-decoration: none; }
+  & li{ margin: 0 0.3rem;
+    &:hover,
+    &.active{text-decoration: underline;}
+  }
+  & strong{font-weight: normal;}
+}
+.footer__nav+.footer__copyright{ margin: 0.5rem 1rem; text-align: right;}
 
 // INPUTS - FORMS
 div.widget{@extend .form-group !optional;}
@@ -175,23 +180,7 @@ div.widget{@extend .form-group !optional;}
   }
 }
 
-// FOOTER
-#footer { padding: $spacing/2; margin-bottom: 0; z-index: $z_header - 2;
-    @if footer(background){background-color: footer(background); }
-    @if footer(font-color){color: footer(font-color); }
-    @if footer(font-size){font-size: footer(font-size); }
-  }
-.footer__copyright{text-align: center;}
-.footer__nav{ margin: 0.5rem 1rem; flex-grow: 1;
-  & ul{@extend .reset;}
-  & a {color: inherit; text-decoration: none; }
-  & li{ margin: 0 0.3rem;
-    &:hover,
-    &.active{text-decoration: underline;}
-  }
-  & strong{font-weight: normal;}
-}
-.footer__nav+.footer__copyright{ margin: 0.5rem 1rem; text-align: right;}
+
 
 // ANIMATIONS
 @include keyframes(appears){
@@ -310,6 +299,27 @@ table.calendar{margin-bottom: $spacing;
 .pagination{
   li{margin: 0 1px;}
   .btn{padding-right: 1em; padding-left: 1em;}
+}
+
+// SOCIALS
+.share-buttons__container{ color: contrastFW(body(background),$primary);
+  [class*=share-buttons__btn]{
+    transition: background 0.4s;
+    display: inline-flex;
+    background: $primary;
+    color: inherit;
+    width: 1.75em;
+    height: 1.75em;
+    font-size: 1.5em;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    &:hover{text-decoration: none;color: inherit;
+      @if lightness($primary)>60{background: scale-color(btn(background),$lightness:-15); }
+      @else{background: scale-color(btn(background),$lightness:15); }
+    }
+    &+[class*=share-buttons__btn]{margin-left: 0.25em;}
+  }
 }
 
 // TESTIMONIAL
