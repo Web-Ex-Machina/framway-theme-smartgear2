@@ -530,3 +530,15 @@ $heightMain : 1.85em;
 .priceCard__cta{ font-size: 1.2em;    
   a{width: 100%;}
 }
+
+
+// EXTRANET
+.mod_login{
+  &.login{max-width: 600px;
+    .login__submitwrapper{display: flex;flex-wrap: wrap;align-items: baseline;justify-content: space-between;}
+    .login__submit{text-align: center;font-size: 0.8em;
+      &:only-child{margin-left: auto;}
+    }
+  }
+}
+.login__forgottenpwd{margin-left: 1em; margin-right: 1em;}
