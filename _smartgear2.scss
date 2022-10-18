@@ -535,10 +535,9 @@ $heightMain : 1.85em;
 // EXTRANET
 .mod_login{
   &.login{max-width: 600px;
-    .login__submitwrapper{display: flex;flex-wrap: wrap;align-items: baseline;justify-content: space-between;}
-    .login__submit{text-align: center;font-size: 0.8em;
+    .login__submitwrapper{display: flex;flex-wrap: wrap;align-items: baseline;justify-content: space-between;font-size: 0.8em;}
+    .login__submit{text-align: center;
       &:only-child{margin-left: auto;}
     }
   }
 }
-.login__forgottenpwd{margin-left: 1em; margin-right: 1em;}
