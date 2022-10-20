@@ -110,6 +110,7 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
 // INPUTS - FORMS
 div.widget{@extend .form-group !optional;}
 .explanation{font-size: 0.8em;font-style: italic;font-weight: 300;}
+label+.error{font-size: 0.7em; margin-bottom: 0.5em;}
 
 // GRIDS
 .d-grid{}
@@ -535,9 +536,28 @@ $heightMain : 1.85em;
 // EXTRANET
 .mod_login{
   &.login{max-width: 600px;
-    .login__submitwrapper{display: flex;flex-wrap: wrap;align-items: baseline;justify-content: space-between;font-size: 0.8em;}
-    .login__submit{text-align: center;
-      &:only-child{margin-left: auto;}
+    .login__submitwrapper{display: flex;flex-wrap: wrap;align-items: baseline;justify-content: center;font-size: 0.8em;
+      .widget:only-child{margin-left: auto;}
     }
+  }
+}
+
+.mod_registration{max-width: 900px;}
+
+// password checker
+.password-checker{ display: flex; flex-wrap: wrap; gap: 1em;
+  .fields{flex-grow: 1; flex-basis: 50%;}
+  .helper{align-self: center;
+    p{margin-bottom: 0.75em; font-weight: bold;}
+    ul{list-style: none;}
+    li{margin-bottom: 0.5em; color: $error;
+      &:before{display: inline-block;content:"\2715"; margin-left: -2.8ch; width: 2.8ch; text-align: center; font-weight: bold;}
+      &.valid{color: $success;
+        &:before{content:"\2713";}
+      }
+    }
+  }
+  input+button{position: absolute !important;right: 2px;width: 40px;top: 50%; transform: translateY(-50%); opacity: 0.5; transition: opacity 0.4s;
+    :hover{opacity: 1;}
   }
 }

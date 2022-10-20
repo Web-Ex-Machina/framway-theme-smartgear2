@@ -1,8 +1,8 @@
-// var images = document.querySelectorAll('#container img');
-// console.log(images);
-// for (var i = 0; i < images.length; i++) {
-//   // images[i].src="";
-// }
+app.labels.errors.inputs.passwordMatch = {
+    fr: 'Les mots de passe ne correspondent pas',
+    en: 'Passwords do not match'
+}
+
 
 $(function () {
   // INIT
@@ -33,6 +33,29 @@ $(function () {
         $(this).css('background-color',utils.stringToColor($(this).text()));
     });
 
+    $('.password-checker').each(function(){
+        var $checker = $(this);
+        var $input   = $checker.find('input[type=password][name]');
+        var $confirm  = $checker.find('input[type=password].confirm');
+        var $helper  = $checker.find('.helper');
+        $checker.find('input+button').on('click',function(){
+            $(this).find('i[class*=fa]').toggleClass('fa-eye fa-eye-slash');
+            $(this).prev('input').attr('type',($(this).prev('input').attr('type') == 'password' ? 'text':'password'));
+        });
+        $input.on('change keyup',function(){
+            $helper.find('[pattern]').each(function(){
+                $(this).removeClass('valid');
+                var reg = new RegExp(this.getAttribute('pattern'));
+                if ($input.val().search(reg) != -1)
+                    $(this).addClass('valid');
+            });
+        });
+        $checker.find('input').on('change keyup',function(){
+            $confirm.get(0).setCustomValidity('');
+            if ($input.val() !== $confirm.val())
+                $confirm.get(0).setCustomValidity(app.labels.errors.inputs.passwordMatch[app.lang]);
+        })
+    })
 
 
     $('body').on('click', 'a[data-lightbox]', function(e) {
