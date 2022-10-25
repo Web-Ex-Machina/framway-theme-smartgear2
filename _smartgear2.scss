@@ -95,7 +95,7 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
     @if footer(font-color){color: footer(font-color); }
     @if footer(font-size){font-size: footer(font-size); }
   }
-.footer__copyright{text-align: center;}
+.footer__copyright{text-align: center; font-size: 0.8em;}
 .footer__nav{ margin: 0.5rem 1rem; flex-grow: 1;
   & ul{@extend .reset;}
   & a {color: inherit; text-decoration: none; }
