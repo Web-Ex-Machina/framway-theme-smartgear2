@@ -472,7 +472,7 @@ table.calendar{ table-layout: fixed;
     }
   } 
   .block-icon__icon{display: flex;align-items: center;justify-content: center;}
-  .block-icon__text{ font-size: 0.9rem; margin: 2rem auto; padding-bottom: 2rem; max-width: 220px; @include lastChildNoMargin(); }
+  .block-icon__text{ font-size: 0.9rem; margin: 2rem auto; padding-bottom: 2rem; width: 220px; @include lastChildNoMargin(); }
   a{color:inherit;text-decoration: none;}
 }
 
