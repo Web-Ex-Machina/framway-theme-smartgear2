@@ -83,6 +83,13 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
 }
 
 
+.mod_wem_sg_social_link{ font-size: 1.5em; 
+  a{display: inline-block; width: 1.5em; height: 1.5em; text-align: center; opacity: 0.4; transition: opacity 0.4s; color: inherit;
+    &:hover{opacity: 1; color: inherit;}
+  }
+}
+
+
 // HEADER
 .headerFW{}
 .headerFW__nav__wrapper{
