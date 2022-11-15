@@ -116,7 +116,7 @@ label+.error{font-size: 0.7em; margin-bottom: 0.5em;}
 .d-grid{}
 .item-grid{
   &>*:last-child{margin-bottom: 0 !important;}
-  & .block-card{height: 100%;}
+  &>.block-card{height: 100%;}
 }
 
 // BLOCK-LIST - DEFAULT
