@@ -159,16 +159,9 @@ label+.error{font-size: 0.7em; margin-bottom: 0.5em;}
 }
 
 // NEWSLIST
-.mod_newslist{
-  &:not(.d-grid){display: flex;flex-wrap: wrap;
-    .block-card{
-      margin-left: $spacing*0.5;
-      margin-right: $spacing*0.5;
-    }
-  }
-  .block-card{
-    padding: 0;
-  }
+.mod_newslist{ @extend .block-card__container,.isFlex !optional;
+  &:not(.d-grid){display: flex;flex-wrap: wrap;}
+  .block-card{padding: 0;}
   .block-card__title{@extend .h2;}
   .block-card__content{justify-content: center;}
 }
