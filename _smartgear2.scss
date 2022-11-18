@@ -141,6 +141,13 @@ label+.error{font-size: 0.7em; margin-bottom: 0.5em;}
     @for $index from 1 through 12{
       &.cols-#{$index}{columns: $index;}
     }
+    @each $key, $value in $breakpoints{
+      @include media-max($key){
+        @for $index from 1 through 12{
+          &.cols-#{$key}-#{$index}{columns: $index;}
+        }
+      }
+    }
     a{position: relative;}
   }
 }
