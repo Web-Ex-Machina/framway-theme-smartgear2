@@ -74,6 +74,10 @@ $(function () {
         if (!$(this).parent().hasClass('img-container')) 
             $(this).wrapAll('<div class="img-container r_16-9"></div>');
     });
+
+    $('#smartgearDisclaimer .close').on('click',function(){
+        $('#smartgearDisclaimer').fadeOut();
+    })
 });
 
 var toggleCalendarEventView = function toggleCalendarEventView()

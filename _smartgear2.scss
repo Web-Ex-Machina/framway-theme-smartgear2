@@ -13,7 +13,12 @@ body.home .heroFW{
 
 .loader{position: absolute; top: 0;bottom: 0;left: 0;right: 0; color: rgba(body(font-color),0.6); background-color: rgba(color(white),0.6); z-index: 10; @include flex-container(row,wrap,center,center); font-size: 3rem;}
 
-#smartgearDisclaimer{position: fixed; left: 1rem; bottom: 1rem; font-size: 0.7em; width: 100%; max-width: 400px; padding: 1.5em;z-index: $z_header - 1; margin-bottom: 0;}
+#smartgearDisclaimer{position: fixed; left: 1rem; bottom: 1rem; font-size: 0.7em; width: 100%; max-width: 400px; padding: 1.5em;z-index: $z_header - 1; margin-bottom: 0;
+  @include media-max(xxs){max-width: 80vw;}
+  .close{ position: absolute; right: 0.25em; top: 0.25em; font-size: 1.5em; width: 1.5em; display: block; text-align: center; cursor: pointer; opacity: 0.4; transition: opacity 0.4s;
+    &:hover{opacity: 0.8;}
+  }
+}
 
 // MEP
 @for $index from 1 through 6{
