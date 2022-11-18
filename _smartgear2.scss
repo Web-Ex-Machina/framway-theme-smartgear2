@@ -122,7 +122,7 @@ label+.error{font-size: 0.7em; margin-bottom: 0.5em;}
 // GRIDS
 .d-grid{}
 .item-grid{
-  &>*:last-child{margin-bottom: 0 !important;}
+  &>*:last-child:not([class*=m-bottom]){margin-bottom: 0 !important;}
   &>.block-card{height: 100%;}
 }
 
