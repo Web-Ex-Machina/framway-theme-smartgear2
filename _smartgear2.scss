@@ -4,10 +4,6 @@ $z_header: 100 !default;
 #guideline{@extend .force-full,.counter-y;
   & .content{height: auto; min-height: 100vh; overflow: visible;}
 }
-body.home .heroFW{ 
-  // @extend .counter-y;
-  // & .heroFW__content{@include media-min(md){padding: 20vw;}}
-}
 
 .btn{@extend %ripple;}
 
