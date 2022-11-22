@@ -57,16 +57,26 @@ $(function () {
         })
     })
 
+    $('a[data-lightbox]').each(function(){
+        var item = $(this);
+        $(this).attr('data-modal',$(this).attr('data-lightbox'));
+        $(this).attr('data-autoload',false);
+        if ($('a[data-lightbox='+item.attr('data-lightbox')+']').length > 1) {
+            $('a[data-lightbox='+item.attr('data-lightbox')+']').each(function(i){
+                $(this).attr('data-gallery',$(this).attr('data-lightbox'));
+                $(this).attr('data-modal',$(this).attr('data-lightbox')+'--'+i);
+            });
+        }
+    })
 
-    $('body').on('click', 'a[data-lightbox]', function(e) {
-      e.preventDefault();
-      if (!$('.modalFW[data-name='+$(this).attr('data-lightbox')+']').length) {
-        $(this).attr('data-modal', $(this).attr('data-lightbox'));
-        new app.ModalFW({
-          name: $(this).attr('data-lightbox'),
-          url: $(this).attr('href'),
-        }).open();
-      }
+    $('a[data-lightbox]').each(function(){
+        app.ModalFW.createModalFromTrigger(this);
+    })
+    utils.addHtmlHook('a[data-lightbox]', function(item){
+        $(item).each(function(){
+            if(ModalFW.debug) app.log("Trigger added to dom for modal "+$(this).data('modal'));
+            app.ModalFW.createModalFromTrigger(this);
+        })
     });
 
     // encapsulate iframe in 16:9 box
