@@ -63,7 +63,7 @@ $(function () {
         if ($('a[data-lightbox='+item.attr('data-lightbox')+']').length > 1) {
             $('a[data-lightbox='+item.attr('data-lightbox')+']').each(function(i){
                 $(this).attr('data-gallery',$(this).attr('data-lightbox'));
-                $(this).attr('data-modal',$(this).attr('data-lightbox')+'--'+i);
+                $(this).attr('data-modal',$(this).attr('data-lightbox')+'__'+i);
             });
         }
     })
