@@ -220,12 +220,20 @@ label+.error{font-size: 0.7em; margin-bottom: 0.5em;}
 }
 
 //MOD_CALENDAR
-.mod_calendar{position: relative; max-width: 85vh;
+.mod_calendar{position: relative; 
+  &:not([class*=w-]){max-width: 85vh;}
   +*{margin-top: 1em;}
 }
-.calendar__event{font-size: 0.8em;margin: 0.25rem 0; border-radius: $radius; padding: 0.35rem; box-shadow: 1px 1px 2px rgba(#000, 0.5); max-width: 100%; width: 100%;  position: relative; overflow: hidden; line-height: 1.2; flex-shrink: 0; transition: all 0.4s; cursor: pointer;
+.calendar__event{font-size: 0.8em;border-radius: $radius; padding: 0.35rem; box-shadow: 1px 1px 2px rgba(#000, 0.5); max-width: 100%; width: auto; position: relative; overflow: hidden; line-height: 1.2; flex-shrink: 0; transition: all 0.4s; cursor: pointer;
+  margin: .25rem 0.5rem;
+  // margin: 0.25rem 0; 
   & a{color: inherit; text-decoration: none; display: block;}
   & span{overflow: hidden; text-overflow: ellipsis; display: block;max-width: 100%;}
+  @for $index from 2 through 7{
+    &.span-#{$index}{max-width: none;  width: 100% * $index;
+      align-self: end;
+    }
+  }
 }
 .modalFW[data-name*="event_"]{
   & .mod_eventreader{
@@ -253,19 +261,25 @@ table.calendar{ table-layout: fixed;
       }
     }
   }
-  & td.days{@extend %paper; display: block; overflow: hidden; margin: 0.25rem; line-height: 1;
+  & td.days{@extend %paper; display: block; margin: 0.25rem; line-height: 1;
+    padding: 0;
+    // overflow: hidden;
     &.empty{background: color(greylight); opacity: 0.5;}
     &:before{content: ""; width: 1px; margin-left: -1px; float: left; height: 0; padding-top: 100%;}
     &:after {content: ""; display: table; clear: both;}
     & .header{position: absolute; top: 0.35rem; left: 0.35rem; font-size: 0.8rem; z-index: 1; pointer-events: none;}
     &.active .header{@include media-max(xxs){color: color(white);}}
-    & .td__wrapper{width: 100%;height: 100%; overflow: hidden;position: absolute; top: 0;left: 0;padding:.25rem 0.5rem; display: flex;flex-direction: column; justify-content: flex-end;}
+    & .td__wrapper{width: 100%;height: 100%;position: absolute; top: 0;left: 0; display: flex;flex-direction: column; justify-content: flex-end;
+      padding:.25rem 0; 
+      // padding:.25rem 0.5rem; 
+      // overflow: hidden;
+    }
     & .event{visibility: hidden;opacity: 0;
       &.active{visibility: visible;opacity: 1;}
       & a{color: inherit;}
     }
     & .reduced{display: none;}
-    & .toggler{background: color(orange); cursor: pointer; position: absolute; border-radius: 100%; height: 35px; text-align: center; line-height: 32px; width: 35px; color: white; right: 0.35rem; bottom: 0.35rem; display: none; box-shadow: 1px 1px 2px rgba(#000, 0.5);
+    & .toggler{background: $error; color: contrastFW(white,$error); font-size: 0.8em; cursor: pointer; position: absolute; border-radius: 100%; height: 30px; text-align: center; line-height: 28px; width: 30px;  right: 0.35rem; bottom: 0.35rem; display: none; box-shadow: 1px 1px 2px rgba(#000, 0.5);
       @include media-max(xxs){right: 0;bottom: 0;top: 0;left: 0; height: auto; width: auto; border-radius: 0; color: transparent;}
     }
     & .reduced+.toggler{display: block;}

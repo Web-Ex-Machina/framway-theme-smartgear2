@@ -21,10 +21,18 @@ $(function () {
 
     $('table.calendar').each(function (index,$calendar) {
         $calendar = $($calendar);
-        $calendar.find('.event').each(function (index,$event) {
-            $event = $($event);
+        // $calendar.find('tr').each(function(index,row){
+        //     $(row).find('.event').each(function(index,event){
+        //         if ($('.event[data-event='+event.getAttribute('data-event')+']').length>1) {
+        //             $($('.event[data-event='+event.getAttribute('data-event')+']').slice(1)).addClass('hidden');
+        //             // $($('.event[data-event='+event.getAttribute('data-event')+']').slice(0,-1)).addClass('hidden');
+        //             $('.event[data-event='+event.getAttribute('data-event')+']').first().addClass('span-'+$('.event[data-event='+event.getAttribute('data-event')+']').length);
+        //         }
+        //     })
+        // });
+        $calendar.find('.event').not('.hidden').each(function (index,event) {
             setTimeout(function () {
-                $event.addClass('active');
+                $(event).addClass('active');
             },100*index);
         });
         $calendar.prev('.loader').remove();
@@ -79,7 +87,7 @@ $(function () {
     });
 
     // encapsulate iframe in 16:9 box
-    $('.mod_article iframe:not(.custom)').each(function(){
+    $('.mod_article iframe').not('.custom').each(function(){
         if (!$(this).parent().hasClass('img-container')) 
             $(this).wrapAll('<div class="img-container r_16-9"></div>');
     });
@@ -94,13 +102,13 @@ var toggleCalendarEventView = function toggleCalendarEventView()
     $('table.calendar').find('.days.active').each(function (index,$day) {
         $day = $($day);
         var offseted = false;
-        $day.find('.event').unwrap('.reduced').each(function () {
+        $day.find('.event').not('.hidden').unwrap('.reduced').each(function () {
             if ($(this).position().top <= 0) {
                 offseted = true;
             }
         });
         if (offseted) {
-            $day.find('.event').wrapAll('<div class="reduced"></div>');
+            $day.find('.event').not('.hidden').wrapAll('<div class="reduced"></div>');
         }
     });
 };
