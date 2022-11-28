@@ -67,6 +67,7 @@ $(function () {
 
     $('a[data-lightbox]').each(function(){
         var item = $(this);
+        $(this).attr('data-lightbox',$(this).attr('data-lightbox')!=""?$(this).attr('data-lightbox'):utils.uniqid());
         $(this).attr('data-modal',$(this).attr('data-lightbox'));
         if ($('a[data-lightbox='+item.attr('data-lightbox')+']').length > 1) {
             $('a[data-lightbox='+item.attr('data-lightbox')+']').each(function(i){
