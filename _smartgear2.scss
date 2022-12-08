@@ -334,7 +334,7 @@ table.calendar{ table-layout: fixed;
 }
 
 // BREADCRUMB
-.mod_breadcrumb{ padding-top: 0.5em; padding-bottom: 0.5em; opacity: 0.3; transition: opacity 0.4s;
+.mod_breadcrumb{ padding-top: 0.5em; padding-bottom: 0.5em; opacity: 0.3; transition: opacity 0.4s; font-size: 0.8em;
   &:hover{opacity: 1;}
   ul{@extend .reset; display: flex;
     li{white-space: nowrap; min-width: 5ch; @include ellipsis();}
