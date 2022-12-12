@@ -77,6 +77,14 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
   .modalFW &.last{padding-bottom: 0;}
   &>*:last-child{margin-bottom: 0;}
   &:last-child{margin-bottom: 0;}
+  &:first-child:not([class*=p-top]):not([class*=p-y]){
+    >.heroFW,>.sliderFW{
+      &:first-child:not([class*=m-top]):not([class*=m-y]){
+        margin-top: -$spacing;
+        @include media-max(xs){margin-top: -$spacing/2;}
+      }
+    }
+  }
 }
 [class*=bg-]:not([class*=bg--]):not([class*=btn-]) .ce_text:last-child>p:last-child{margin-bottom: 0;}
 
