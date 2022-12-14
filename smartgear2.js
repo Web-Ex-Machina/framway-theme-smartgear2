@@ -65,16 +65,21 @@ $(function () {
         })
     })
 
-    $('a[data-lightbox]').each(function(){
-        var item = $(this);
-        $(this).attr('data-lightbox',$(this).attr('data-lightbox')!=""?$(this).attr('data-lightbox'):utils.uniqid());
-        $(this).attr('data-modal',$(this).attr('data-lightbox'));
+    var setupLightbox = function(el){
+        var item = $(el);
+        item.attr('data-lightbox',item.attr('data-lightbox')!=""?item.attr('data-lightbox'):utils.uniqid());
+        item.attr('data-modal',item.attr('data-lightbox'));
         if ($('a[data-lightbox='+item.attr('data-lightbox')+']').length > 1) {
             $('a[data-lightbox='+item.attr('data-lightbox')+']').each(function(i){
                 $(this).attr('data-gallery',$(this).attr('data-lightbox'));
                 $(this).attr('data-modal',$(this).attr('data-lightbox')+'__'+i);
             });
+        } else {
+            item.attr('data-modal',$(this).attr('data-lightbox'));
         }
+    }
+    $('a[data-lightbox]').each(function(){
+        setupLightbox(this);
     })
 
     $('a[data-lightbox]').each(function(){
@@ -82,7 +87,10 @@ $(function () {
     })
     utils.addHtmlHook('a[data-lightbox]', function(item){
         $(item).each(function(){
-            if(ModalFW.debug) app.log("Trigger added to dom for modal "+$(this).data('modal'));
+            if(app.ModalFW.debug) app.log("Trigger added to dom for modal "+$(this).data('modal'));
+            setupLightbox(this);
+        })
+        $(item).each(function(){
             app.ModalFW.createModalFromTrigger(this);
         })
     });
