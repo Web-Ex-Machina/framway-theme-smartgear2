@@ -348,6 +348,9 @@ table.calendar{ table-layout: fixed;
     li{white-space: nowrap; min-width: 5ch; @include ellipsis();}
     li:not(:first-child):before{content:">"; display: inline-block;margin-left: 0.5em; margin-right: 0.5em; font-family: monospace; font-weight: 300;}
   }
+  .sliderFW:not(.m-bottom-0) + &,
+  .heroFW:not(.m-bottom-0)   + &{margin-top: -$spacing;}
+  .mod_article &{margin-bottom: $spacing;}
 }
 
 // PAGINATION
