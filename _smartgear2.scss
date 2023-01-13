@@ -357,9 +357,9 @@ table.calendar{ table-layout: fixed;
 }
 
 // BREADCRUMB
-.mod_breadcrumb{ padding-top: 0.5em; padding-bottom: 0.5em; opacity: 0.3; transition: opacity 0.4s; font-size: 0.8em;
+.mod_breadcrumb{ padding-top: 0.5em; padding-bottom: 0.5em; opacity: 0.3; transition: opacity 0.4s; 
   &:hover{opacity: 1;}
-  ul{@extend .reset; display: flex;
+  >ul{@extend .reset; display: flex; font-size: 0.8em;
     li{white-space: nowrap; min-width: 5ch; @include ellipsis();}
     li:not(:first-child):before{content:">"; display: inline-block;margin-left: 0.5em; margin-right: 0.5em; font-family: monospace; font-weight: 300;}
   }
