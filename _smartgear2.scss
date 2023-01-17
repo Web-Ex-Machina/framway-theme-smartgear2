@@ -1,5 +1,5 @@
 $z_header: 100 !default;
-#wrapper {min-height: 100vh; @include flex-container(column); }
+#wrapper {min-height: 100vh; @include flex-container(column); position: relative;}
 #container{flex-grow: 1;}
 #guideline{@extend .force-full,.counter-y;
   & .content{height: auto; min-height: 100vh; overflow: visible;}
