@@ -604,3 +604,11 @@ $heightMain : 1.85em;
     :hover{opacity: 1;}
   }
 }
+
+
+// GEODATA
+.locations__filters{display: flex;flex-wrap: wrap; gap: 1em; font-size: 0.8em;}
+.location__filter{flex-grow: 1; flex-shrink: 0; flex-basis: 30%; max-width: 100%; min-width: 300px;
+  &.form-group{margin: 0;}
+  &.w-100{flex-basis: 100%;}
+}
