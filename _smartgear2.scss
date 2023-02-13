@@ -457,16 +457,19 @@ table.calendar{ table-layout: fixed;
 .job__title{}
 .job__location{opacity: 0.6; margin-bottom: 1.5em; margin-top: 1.5em;}
 .job__location__icon{margin-right: 0.25em; font-size: 1.25em;}
-.job__teaser{}
-.job__attributes{@extend .d-grid,.cols-3,.cols-xs-1,.p-y !optional;
-  .job_default &{@extend .p-x !optional;}
-}
+.job__teaser{@include multi-ellipsis(1em,body(line-height), 3);}
+.job__attributes{ display: flex; flex-wrap: wrap; justify-content: center; gap: $spacing; margin: $spacing*2 $spacing;}
 .job__attribute{
-  .job_default &{@extend .p-x !optional;}
+  flex-grow: 1; 
+  flex-shrink: 0;
+  flex-basis: 30%; 
+  max-width: 100%;
+  min-width: 200px;
+  padding: 0 $spacing;
 }
 .job__attribute__title{font-size: 1.2em; margin-bottom: 0.35em; white-space: nowrap;}
 .job__attribute__value{opacity: 0.6;}
-.job__footer{@extend .counter-bottom,.counter-right !optional; display: flex; justify-content: flex-end; padding: 0 1.45em .75em;}
+.job__footer{@extend .counter-bottom,.counter-right,.counter-top !optional; display: flex; justify-content: flex-end; padding: 0 1.45em .75em;}
 .job__more{font-size: 2em; opacity: 0.4; transition: opacity 0.4s; cursor: pointer; color: $primary;
   &:hover{opacity: 0.8;}
 }
