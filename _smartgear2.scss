@@ -615,3 +615,87 @@ $heightMain : 1.85em;
   &.form-group{margin: 0;}
   &.w-100{flex-basis: 100%;}
 }
+
+
+// audiotracks
+.mod_wemaudiotrackslist{}
+.audiotracks{display: flex; flex-wrap: wrap; gap: 2rem;}
+.audiotrack{}
+.audiotrack__wrapper{display: flex; flex-wrap: wrap; gap: 2rem;
+  @include media-max(sm){gap: 1rem;}
+  >*{flex-grow: 1;flex-shrink: 0; max-width: 100%;}
+}
+.audiotrack__figure{flex-basis: 25%; min-width: 200px;
+  @include media-max(xxs){min-width: 0;}
+}
+.audiotrack__figure__text{position: absolute; max-width: 90%;top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 1; text-align: center; color: body(background); text-shadow: 0 0 3px black; font-size: 1.5em; text-transform: uppercase;}
+.audiotrack__content{flex-basis: 50%; min-width: 400px;display: flex; flex-wrap: wrap; gap: 2rem;
+  @include media-max(sm){min-width: 300px; gap: 1rem;}
+  @include media-max(xxs){min-width: 0;}
+  >*{flex-grow: 1;flex-shrink: 0; max-width: 100%;}
+  .audiotrack__figure{flex-basis: 10%;min-width: 150px;min-height: -webkit-fill-available; max-height: 20vh;}
+}
+.audiotrack__text{flex-basis: 60%; min-width: 300px;
+  @include media-max(xxs){min-width: 0;}
+}
+.audiotrack__title{}
+.audiotrack__actions{flex-basis: 100%; display: flex; gap: 1em; align-items: center;}
+.audiotrack__play{display: block;position: relative;background: $tertiary; color:body(background); width: 2em; height: 2em; border-radius: 100%; transition: all 0.4s; display: flex; align-items: center;justify-content: center; cursor: pointer; opacity: 0.8;
+  .fa-play {transform: translateX(15%);}
+  &:not(.playing) .fa-pause{display: none;}
+  &.playing       .fa-play {display: none;}
+  &:hover{opacity: 1;}
+}
+.audiotrack__duration{flex-grow: 1;}
+.audiotrack__footer{flex-basis: 15%;min-width: 200px; display: flex; flex-wrap: wrap; gap: 2rem; 
+  @include media-max(sm){flex-basis: 100%;}
+}
+.audiotrack__tags{flex-grow: 1;flex-shrink: 0; max-width: 100%; min-width: 250px;
+  @include media-max(xxs){min-width: 150px;}
+  .tag{font-size: 0.8em;display: inline-block; background: rgba($secondary,0.2);padding: 0.35em 0.5em;}
+}
+.audiotrack__likes{ align-self: flex-end; line-height: 2em; cursor: pointer;
+  i[class*=fa],svg{color: $tertiary;}
+}
+
+
+.audioPlayer                                 {background: body(block-background); padding: 1em; 
+  input[type=range]{
+    &:before,&:after{display: none;}
+  }
+}
+.audioPlayer__wrapper                        {display: flex;  gap: 1em; align-items: center;}
+.audioPlayer__title                          {flex-basis: 30%; min-width: 300px; flex-grow: 1; white-space: nowrap;
+  @include media-max(xxs){min-width: 0;}
+}
+.audioPlayer__controls                       {flex-basis: 65%; min-width: 300px; display: flex; flex-grow: 1;align-items: center; gap: 1em;
+  @include media-max(xxs){min-width: 0;}
+}
+.audioPlayer__buttons                        {display: flex; gap: 0.65em; align-items: center;}
+.audioPlayer__button                         {opacity: 0.6; transition: opacity 0.4s; cursor: pointer; min-width: 1em; text-align: center;
+  &.disabled{opacity: 0.2 !important;pointer-events: none;}
+  &:hover{opacity: 1;}
+  &.play {font-size: 1.5em; opacity: 1; 
+    .audioPlayer:not(.playing) & .fa-pause{display: none;}
+    .audioPlayer.playing       & .fa-play {display: none;}
+  }
+}
+.audioPlayer__timecontrols                   {display: flex; font-size: 0.8em; font-weight: 300; flex-grow: 1; align-items: center; gap: 1em;}
+.audioPlayer__current                        {opacity: 0.8;}
+.audioPlayer__track:is(input[type=range])    {flex-grow: 1; margin: 0;}
+.audioPlayer__duration                       {opacity: 0.8;}
+.audioPlayer__volumecontrols                 {font-size: 0.8em;display: flex;align-items: center;}
+.audioPlayer__volume:is(input[type=range])   {transition: all 0.5s; width: 0em; margin: 0; overflow: hidden; 
+  .audioPlayer__volumecontrols:hover &{width: 6em; margin-right: 1em;}
+}
+.audioPlayer__mute                           {
+  &:not(.mute) .fa-volume-slash{display: none;}
+  &.mute .fa-volume            {display: none;}
+}
+
+@include media-max(sm){
+  .audioPlayer__wrapper{gap: 0.5em; flex-wrap: wrap;}
+  .audioPlayer__title{flex-basis: 100%; text-align: center; }
+  .audioPlayer__controls{flex-wrap: wrap; gap: 0.5em;}
+  .audioPlayer__buttons{flex-basis: 100%; justify-content: center;}
+}
