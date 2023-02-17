@@ -656,6 +656,8 @@ $heightMain : 1.85em;
 }
 .audiotrack__likes{ align-self: flex-end; line-height: 2em; cursor: pointer;
   i[class*=fa],svg{color: $tertiary;}
+  &:not(.liked) .fa-heart.full{display: none;}
+  &.liked .fa-heart.empty {display: none;}
 }
 
 
