@@ -638,6 +638,10 @@ $heightMain : 1.85em;
 .audiotrack__text{flex-basis: 60%; min-width: 300px;
   @include media-max(xxs){min-width: 0;}
 }
+.audiotrack__listened{display: flex;align-items: center;gap: 0.5em;
+  &:not(.active){display: none;}
+  span{opacity: 0.65;}
+}
 .audiotrack__title{}
 .audiotrack__actions{flex-basis: 100%; display: flex; gap: 1em; align-items: center;}
 .audiotrack__play{display: block;position: relative;background: $tertiary; color:body(background); width: 2em; height: 2em; border-radius: 100%; transition: all 0.4s; display: flex; align-items: center;justify-content: center; cursor: pointer; opacity: 0.8;
@@ -658,6 +662,16 @@ $heightMain : 1.85em;
   i[class*=fa],svg{color: $tertiary;}
   &:not(.liked) .fa-heart.full{display: none;}
   &.liked .fa-heart.empty {display: none;}
+}
+
+.audiotracks__filters{
+}
+.audiotracks__filters__line{gap: 0.5em; align-items: flex-start; display: grid; 
+  grid-template-columns: Repeat(Auto-fill, Minmax(#{320px}, 1fr)); 
+  .form-group{margin-bottom: 0;}
+}
+.audiotracks__filters__col{display: flex;flex-wrap: wrap; flex-basis: 40%; flex-grow: 1; min-width: 300px;
+  @include media-max(xxs){min-width: 0;}
 }
 
 
