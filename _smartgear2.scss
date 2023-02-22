@@ -644,7 +644,7 @@ $heightMain : 1.85em;
 }
 .audiotrack__title{}
 .audiotrack__actions{flex-basis: 100%; display: flex; gap: 1em; align-items: center;}
-.audiotrack__play{display: block;position: relative;background: $tertiary; color:body(background); width: 2em; height: 2em; border-radius: 100%; transition: all 0.4s; display: flex; align-items: center;justify-content: center; cursor: pointer; opacity: 0.8;
+.audiotrack__play{display: block;position: relative;background: $primary; color:body(background); width: 2em; height: 2em; border-radius: 100%; transition: all 0.4s; display: flex; align-items: center;justify-content: center; cursor: pointer; opacity: 0.8;
   .fa-play {transform: translateX(15%);}
   &:not(.playing) .fa-pause{display: none;}
   &.playing       .fa-play {display: none;}
@@ -659,7 +659,7 @@ $heightMain : 1.85em;
   .tag{font-size: 0.8em;display: inline-block; background: rgba($secondary,0.2);padding: 0.35em 0.5em;}
 }
 .audiotrack__likes{ align-self: flex-end; line-height: 2em; cursor: pointer;
-  i[class*=fa],svg{color: $tertiary;}
+  i[class*=fa],svg{color: $primary;}
   &:not(.liked) .fa-heart.full{display: none;}
   &.liked .fa-heart.empty {display: none;}
 }
