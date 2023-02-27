@@ -656,7 +656,7 @@ $heightMain : 1.85em;
 }
 .audiotrack__tags{flex-grow: 1;flex-shrink: 0; max-width: 100%; min-width: 250px;
   @include media-max(xxs){min-width: 150px;}
-  .tag{font-size: 0.8em;display: inline-block; background: rgba($secondary,0.2);padding: 0.35em 0.5em;}
+  .tag{font-size: 0.8em;display: inline-block; background: rgba($secondary,0.2);padding: 0.35em 0.5em; margin:3px 0;}
 }
 .audiotrack__likes{ align-self: flex-end; line-height: 2em; cursor: pointer;
   i[class*=fa],svg{color: $primary;}
