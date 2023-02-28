@@ -486,11 +486,11 @@ table.calendar{ table-layout: fixed;
 // .offer__more{font-size: 2em; opacity: 0.4; transition: opacity 0.4s; cursor: pointer; color: $primary;
 //   &:hover{opacity: 0.8;}
 // }
-.offer__more{ opacity: 0.2; transition: opacity 0.4s; display: inline-block;  position: relative; width: 2em; height: 2em; color: inherit; cursor: pointer;
+.offer__more:is(div){ opacity: 0.4; transition: opacity 0.4s; display: inline-block;  position: relative; width: 2em; height: 2em; color: inherit; cursor: pointer;
   &:before,
   &:after{ content: ""; display: block; width: 2em; height: 5px;margin: auto; width: 85%; background: currentColor; top: 50%; left: 50%; position: absolute; transform: translateX(-50%); border-radius: 20px;}
   &:before{transform: translateX(-50%) rotate(90deg);}
-  &:hover{opacity: 0.6; color: inherit;}
+  &:hover{opacity: 0.8; color: inherit;}
 }
 
 
