@@ -452,41 +452,41 @@ table.calendar{ table-layout: fixed;
 }
 
 
-// CONTAO-JOB-OFFERS
-.job{}
-.job__title{}
-.job__location{opacity: 0.6; margin-bottom: 1.5em; margin-top: 1.5em;}
-.job__location__icon{margin-right: 0.25em; font-size: 1.25em;}
-.job__figure{background: color(greylighter); 
+// CONTAO-OFFERS
+.offer{}
+.offer__title{}
+.offer__location{opacity: 0.6; margin-bottom: 1.5em; margin-top: 1.5em;}
+.offer__location__icon{margin-right: 0.25em; font-size: 1.25em;}
+.offer__figure{background: color(greylighter); 
   .block-card[data-preset=inline] .block-card__wrapper &{flex-basis: 20%; max-height: 40vw;}
-  .job_details &+* {margin-top: $spacing; }
-  .job_details &+.sliderFW {margin-top: 1rem; }
+  .offer_details &+* {margin-top: $spacing; }
+  .offer_details &+.sliderFW {margin-top: 1rem; }
 }
-.job__teaser{@include multi-ellipsis(1em,body(line-height), 4); max-height: 100%;
+.offer__teaser{@include multi-ellipsis(1em,body(line-height), 4); max-height: 100%;
   p,ul,ol{line-height: inherit;}
 }
-.job__attributes{ display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2em; margin: 2em*1.5 2em;
-  // .job_details &{margin: 2em*1.5 0;}
+.offer__attributes{ display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2em; margin: 2em*1.5 2em;
+  // .offer_details &{margin: 2em*1.5 0;}
 }
-.job__attribute{
+.offer__attribute{
   // flex-grow: 1; 
   flex-shrink: 0;
   flex-basis: 28%; 
   max-width: 100%;
   min-width: 150px;
   padding: 0 2em;
-  // .job_details &{}
+  // .offer_details &{}
 }
-.job__attribute__title{font-size: 1.2em; margin-bottom: 0.35em; white-space: nowrap;}
-.job__attribute__value{opacity: 0.6;}
-.job__footer{display: flex; justify-content: flex-end; padding: 0 1em 1em; margin-top: 1em;
+.offer__attribute__title{font-size: 1.2em; margin-bottom: 0.35em; white-space: nowrap;}
+.offer__attribute__value{opacity: 0.6;}
+.offer__footer{display: flex; justify-content: flex-end; padding: 0 1em 1em; margin-top: 1em;
   .block-card[data-preset=inline] .block-card__content &{margin: 1em -2.5em -3em; }
   .block-std &{@extend .counter-bottom,.counter-right !optional;}
 }
-// .job__more{font-size: 2em; opacity: 0.4; transition: opacity 0.4s; cursor: pointer; color: $primary;
+// .offer__more{font-size: 2em; opacity: 0.4; transition: opacity 0.4s; cursor: pointer; color: $primary;
 //   &:hover{opacity: 0.8;}
 // }
-.job__more{ opacity: 0.2; transition: opacity 0.4s; display: inline-block;  position: relative; width: 2em; height: 2em; color: inherit; cursor: pointer;
+.offer__more{ opacity: 0.2; transition: opacity 0.4s; display: inline-block;  position: relative; width: 2em; height: 2em; color: inherit; cursor: pointer;
   &:before,
   &:after{ content: ""; display: block; width: 2em; height: 5px;margin: auto; width: 85%; background: currentColor; top: 50%; left: 50%; position: absolute; transform: translateX(-50%); border-radius: 20px;}
   &:before{transform: translateX(-50%) rotate(90deg);}
