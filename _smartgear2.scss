@@ -652,7 +652,9 @@ $heightMain : 1.85em;
   @include media-max(sm){min-width: 300px; gap: 1rem;}
   @include media-max(xxs){min-width: 0;}
   >*{flex-grow: 1;flex-shrink: 0; max-width: 100%;}
-  .audiotrack__figure{flex-basis: 10%;min-width: 150px;min-height: -webkit-fill-available; max-height: 20vh;}
+  .audiotrack__figure{flex-basis: 10%;min-width: 150px;min-height: -webkit-fill-available; max-height: 20vh;
+    img{height: auto !important; max-width: 100%; max-height: 100%;}
+  }
 }
 .audiotrack__text{flex-basis: 60%; min-width: 300px;
   @include media-max(xxs){min-width: 0;}
@@ -670,10 +672,11 @@ $heightMain : 1.85em;
   &:hover{opacity: 1;}
 }
 .audiotrack__duration{flex-grow: 1;}
-.audiotrack__footer{flex-basis: 15%;min-width: 200px; display: flex; flex-wrap: wrap; gap: 2rem; 
-  @include media-max(sm){flex-basis: 100%;}
+.audiotrack__footer{flex-basis: 15%;min-width: 200px; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;
+  @include media-max(sm){flex-basis: 100%; flex-wrap: nowrap; gap: 1rem; }
 }
-.audiotrack__tags{flex-grow: 1;flex-shrink: 0; max-width: 100%; min-width: 250px;
+.audiotrack__tags{flex-grow: 1;flex-shrink: 0; max-width: 90%; min-width: 250px;
+  @include media-max(sm){max-width: 80%;}
   @include media-max(xxs){min-width: 150px;}
   .tag{font-size: 0.8em;display: inline-block; background: rgba($secondary,0.2);padding: 0.35em 0.5em; margin:3px 0;}
 }
