@@ -284,7 +284,7 @@ table.calendar{ table-layout: fixed;
       }
     }
   }
-  & td.days{@extend %paper; display: block; margin: 0.25rem; line-height: 1;
+  & td.days{@include paper(); display: block; margin: 0.25rem; line-height: 1;
     padding: 0;
     // overflow: hidden;
     &.empty{background: color(greylight); opacity: 0.5;}
@@ -593,7 +593,7 @@ $heightMain : 1.85em;
     .priceCard.empty{display: none;}
   }
 }
-.priceCard{padding: 0;max-width: 100%; @extend %paper !optional;
+.priceCard{padding: 0;max-width: 100%; @include paper();
   &.empty{margin: 0 !important; box-shadow: none;}
 }
 .priceCard__wrapper{ display: flex; flex-direction: column;align-items: center;  padding: 0 0 1.25em; height: 100%; 
