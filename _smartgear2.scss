@@ -465,7 +465,8 @@ table.calendar{ table-layout: fixed;
 .offer__teaser{@include multi-ellipsis(1em,body(line-height), 4); max-height: 100%;
   p,ul,ol{line-height: inherit;}
 }
-.offer__attributes{ display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2em; margin: 2em*1.5 2em;
+.offer__attributes{ display: flex; flex-wrap: wrap; justify-content: space-around; margin: 2em*1.5 auto; gap: 2em;
+  @include media-max(xs){margin: 1em*1.5 auto; gap: 1em;}
   // .offer_details &{margin: 2em*1.5 0;}
 }
 .offer__attribute{
@@ -473,8 +474,9 @@ table.calendar{ table-layout: fixed;
   flex-shrink: 0;
   flex-basis: 28%; 
   max-width: 100%;
-  min-width: 150px;
+  min-width: 120px;
   padding: 0 2em;
+  @include media-max(xs){padding: 0 1em;}
   // .offer_details &{}
 }
 .offer__attribute__title{font-size: 1.2em; margin-bottom: 0.35em; white-space: nowrap;}
