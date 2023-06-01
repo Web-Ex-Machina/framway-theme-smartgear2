@@ -411,7 +411,7 @@ table.calendar{ table-layout: fixed;
 }
 
 // Quote
-.ce_rsce_quote{position: relative; padding: 7.5ch; display: flex;justify-content: center; align-items: start; flex-wrap: wrap;
+.ce_rsce_quote{position: relative; padding: 7.5ch; display: flex;justify-content: center; align-items: flex-start; flex-wrap: wrap;
   &:before,
   &:after {color: $primary; font-size: 5em; font-style: normal; line-height: 1.5ch; position: absolute; text-align: center; width: 1.5ch; font-family: serif;
     filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
