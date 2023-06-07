@@ -92,9 +92,9 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
   .modalFW &.last{padding-bottom: 0;}
   &>*:last-child{margin-bottom: 0;}
   &:last-child{margin-bottom: 0;}
-  &:first-child:not([class*=p-top]):not([class*=p-y]){
+  &:first-child:not([class*=p-top]):not([class*=p-y]):not([class*=p-0]){
     >.heroFW,>.sliderFW{
-      &:first-child:not([class*=m-top]):not([class*=m-y]){
+      &:first-child:not([class*=m-top]):not([class*=m-y]):not([class*=m-0]){
         margin-top: -$spacing;
         @include media-max(xs){margin-top: -$spacing/2;}
       }
