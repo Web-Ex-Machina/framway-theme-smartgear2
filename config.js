@@ -19,4 +19,6 @@ module.exports = {
 		// 'xs'  : '540px',
 		// 'xxs' : '100%',
 	},
+	'track-color': 'rgba(primary,0.2)',
+	'filll-color': 'rgba(primary,0.5)',
 };
