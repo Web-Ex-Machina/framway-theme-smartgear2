@@ -224,6 +224,7 @@ label+.error{font-size: 0.7em; margin-bottom: 0.5em;}
   .block-card{padding: 0;}
   .block-card__title{@extend .h2;}
   .block-card__content{justify-content: center;}
+  +*:not([class*=m-top]):not([class*=m-y]){margin-top: $spacing;}
 }
 .block-card__figure .block-card__headline{position: absolute;bottom: 0; width: 100%; z-index: 1; margin: 0 !important;}
 
