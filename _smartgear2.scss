@@ -377,6 +377,7 @@ table.calendar{ table-layout: fixed;
 
 // PAGINATION
 .pagination{
+  *+&{margin-top: 1em;}
   li{margin: 0 1px;}
   .btn{padding-right: 1em; padding-left: 1em;}
 }
