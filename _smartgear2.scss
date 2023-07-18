@@ -460,6 +460,29 @@ table.calendar{ table-layout: fixed;
 }
 
 
+// quote with rating
+.ce_rsce_quoteWrating{ position: relative; padding: 3.4em 3em 3em; min-width: 300px; margin-top: 1em; display: flex; border-radius: $radius;
+  &:not([class*=bg-none]){@include paper();}
+  @include media-max(xs){min-width: 0;}
+  .quote--wrapper{display: flex; flex-direction: column;justify-content: flex-end;}
+  .quote--icon{ font-size: 4em; position: absolute; right: 15%; top: -0.4em; color: $primary; filter: drop-shadow(4px 3px 0px $secondary);}
+  .rating{ margin-bottom: 1em;}
+  .rating--text{}
+  .rating--stars{ color: $primary;
+    .rating--text+&{margin-top: 0.25em;}
+    .empty{
+      color: var(--fa-secondary-color,currentColor);
+      opacity: var(--fa-secondary-opacity,.4);
+    }
+  }
+  .quote{font-size: 0.85em; margin-top: auto; margin-bottom: auto;
+    &+*{margin-top: 1em;}
+  }
+  .author{font-weight: 600; font-size: 0.9em;}
+  .author_position{font-size: 0.85em; font-weight: 300;}
+}
+
+
 // CONTAO-OFFERS
 .offer{}
 .offer__title{}
