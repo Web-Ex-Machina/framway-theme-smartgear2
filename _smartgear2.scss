@@ -656,7 +656,7 @@ $logoSpace : clamp(3em,6vw,130px) !default;
 
 // audiotracks
 .mod_wemaudiotrackslist{}
-.audiotracks{display: flex; flex-wrap: wrap; gap: 2em;}
+.audiotracks{display: grid; gap: 2em;}
 .audiotrack{font-size: 0.8em;
   &:not(.inline){ @include paper();
     background: body(block-background); color: contrastFW(body(font-color), body(block-background));
