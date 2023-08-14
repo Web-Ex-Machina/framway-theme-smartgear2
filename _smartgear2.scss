@@ -372,7 +372,7 @@ table.calendar{ table-layout: fixed;
   }
   .sliderFW:not(.m-bottom-0) + &,
   .heroFW:not(.m-bottom-0)   + &{margin-top: -$spacing;}
-  .mod_article &{margin-bottom: $spacing;}
+  .mod_article &:not(:last-child){margin-bottom: $spacing;}
 }
 
 // PAGINATION
