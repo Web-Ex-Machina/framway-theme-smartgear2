@@ -416,6 +416,8 @@ table.calendar{ table-layout: fixed;
   @include media-max(xxs){width: 2rem; height: 2rem;}
 }
 
+.ce_sliderStart .slider-control{position: static;height: 0;}
+
 // Quote
 .ce_rsce_quote{position: relative; padding: 7.5ch; display: flex;justify-content: center; align-items: flex-start; flex-wrap: wrap;
   &:before,
