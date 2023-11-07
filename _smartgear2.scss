@@ -149,6 +149,9 @@ div.widget{@extend .form-group !optional;}
 .explanation{font-size: 0.8em;font-style: italic;font-weight: 300;}
 label+.error{font-size: 0.7em; margin-bottom: 0.5em;}
 
+.cto-toolbar select:not(.custom){display: block;}
+
+
 // GRIDS
 .d-grid{}
 .item-grid{
