@@ -32,7 +32,7 @@ body.cols--2{
 }
 
 body.cols--3{
-  #wrapper{overflow: hidden;}
+  // #wrapper{overflow: hidden;}
   #container{ display: flex; column-gap: $spacing; flex-wrap: wrap;
     @include media-max(sm){}
     @include media-max(xs){column-gap: $spacing/2;}
