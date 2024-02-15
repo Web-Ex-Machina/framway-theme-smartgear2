@@ -5,7 +5,7 @@ $z_header: 100 !default;
   & .content{height: auto; min-height: 100vh; overflow: visible;}
 }
 
-.btn{@extend %ripple;}
+%btn{@extend %ripple;}
 
 .loader{position: absolute; top: 0;bottom: 0;left: 0;right: 0; color: rgba(body(font-color),0.6); background-color: rgba(color(white),0.6); z-index: 10; @include flex-container(row,wrap,center,center); font-size: 3rem;}
 
@@ -398,7 +398,7 @@ table.calendar{ table-layout: fixed;
 .pagination{
   *+&{margin-top: 1em;}
   li{margin: 0 1px;}
-  .btn{padding-right: 1em; padding-left: 1em;}
+  %btn{--btn-p-x: 1em;}
 }
 
 // SOCIALS
