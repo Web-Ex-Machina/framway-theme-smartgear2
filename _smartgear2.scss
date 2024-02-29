@@ -509,48 +509,48 @@ table.calendar{ table-layout: fixed;
 }
 
 
-// CONTAO-OFFERS
-.offer{}
-.offer__title{}
-.offer__location{opacity: 0.6; margin-bottom: 1.5em; margin-top: 1.5em;}
-.offer__location__icon{margin-right: 0.25em; font-size: 1.25em;}
-.offer__figure{background: color(greylighter); 
-  .block-card[data-preset=inline] .block-card__wrapper &{flex-basis: 20%; max-height: 40vw;}
-  .offer_details &+* {margin-top: $spacing; }
-  .offer_details &+.sliderFW {margin-top: 1rem; }
-}
-.offer__teaser{@include multi-ellipsis(1em,body(line-height), 4); max-height: 100%;
-  p,ul,ol{line-height: inherit;}
-}
-.offer__attributes{ display: flex; flex-wrap: wrap; justify-content: space-around; margin: 2em*1.5 auto; gap: 2em;
-  @include media-max(xs){margin: 1em*1.5 auto; gap: 1em;}
-  // .offer_details &{margin: 2em*1.5 0;}
-}
-.offer__attribute{
-  // flex-grow: 1; 
-  flex-shrink: 0;
-  flex-basis: 28%; 
-  max-width: 100%;
-  min-width: 120px;
-  padding: 0 2em;
-  @include media-max(xs){padding: 0 1em;}
-  // .offer_details &{}
-}
-.offer__attribute__title{font-size: 1.2em; margin-bottom: 0.35em; white-space: nowrap;}
-.offer__attribute__value{opacity: 0.6;}
-.offer__footer{display: flex; justify-content: flex-end; padding: 0 1em 1em; margin-top: 1em;
-  .block-card[data-preset=inline] .block-card__content &{margin: 1em -2.5em -3em; }
-  .block-std &{@extend .counter-bottom,.counter-right !optional;}
-}
-// .offer__more{font-size: 2em; opacity: 0.4; transition: opacity 0.4s; cursor: pointer; color: $primary;
-//   &:hover{opacity: 0.8;}
+// // CONTAO-OFFERS
+// .offer{}
+// .offer__title{}
+// .offer__location{opacity: 0.6; margin-bottom: 1.5em; margin-top: 1.5em;}
+// .offer__location__icon{margin-right: 0.25em; font-size: 1.25em;}
+// .offer__figure{background: color(greylighter); 
+//   .block-card[data-preset=inline] .block-card__wrapper &{flex-basis: 20%; max-height: 40vw;}
+//   .offer_details &+* {margin-top: $spacing; }
+//   .offer_details &+.sliderFW {margin-top: 1rem; }
 // }
-.offer__more:is(div){ opacity: 0.4; transition: opacity 0.4s; display: inline-block;  position: relative; width: 2em; height: 2em; color: inherit; cursor: pointer;
-  &:before,
-  &:after{ content: ""; display: block; width: 2em; height: 5px;margin: auto; width: 85%; background: currentColor; top: 50%; left: 50%; position: absolute; transform: translateX(-50%); border-radius: 20px;}
-  &:before{transform: translateX(-50%) rotate(90deg);}
-  &:hover{opacity: 0.8; color: inherit;}
-}
+// .offer__teaser{@include multi-ellipsis(1em,body(line-height), 4); max-height: 100%;
+//   p,ul,ol{line-height: inherit;}
+// }
+// .offer__attributes{ display: flex; flex-wrap: wrap; justify-content: space-around; margin: 2em*1.5 auto; gap: 2em;
+//   @include media-max(xs){margin: 1em*1.5 auto; gap: 1em;}
+//   // .offer_details &{margin: 2em*1.5 0;}
+// }
+// .offer__attribute{
+//   // flex-grow: 1; 
+//   flex-shrink: 0;
+//   flex-basis: 28%; 
+//   max-width: 100%;
+//   min-width: 120px;
+//   padding: 0 2em;
+//   @include media-max(xs){padding: 0 1em;}
+//   // .offer_details &{}
+// }
+// .offer__attribute__title{font-size: 1.2em; margin-bottom: 0.35em; white-space: nowrap;}
+// .offer__attribute__value{opacity: 0.6;}
+// .offer__footer{display: flex; justify-content: flex-end; padding: 0 1em 1em; margin-top: 1em;
+//   .block-card[data-preset=inline] .block-card__content &{margin: 1em -2.5em -3em; }
+//   .block-std &{@extend .counter-bottom,.counter-right !optional;}
+// }
+// // .offer__more{font-size: 2em; opacity: 0.4; transition: opacity 0.4s; cursor: pointer; color: $primary;
+// //   &:hover{opacity: 0.8;}
+// // }
+// .offer__more:is(div){ opacity: 0.4; transition: opacity 0.4s; display: inline-block;  position: relative; width: 2em; height: 2em; color: inherit; cursor: pointer;
+//   &:before,
+//   &:after{ content: ""; display: block; width: 2em; height: 5px;margin: auto; width: 85%; background: currentColor; top: 50%; left: 50%; position: absolute; transform: translateX(-50%); border-radius: 20px;}
+//   &:before{transform: translateX(-50%) rotate(90deg);}
+//   &:hover{opacity: 0.8; color: inherit;}
+// }
 
 
 // mod_listing
