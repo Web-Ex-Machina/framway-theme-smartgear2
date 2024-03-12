@@ -19,7 +19,7 @@ $z_header: 100 !default;
 // LAYOUT
 body.cols--2{
   .mod_breadcrumb{@extend .container !optional;}
-  #wrapper{overflow: hidden;}
+  // #wrapper{overflow: hidden;}
   #container{ display: flex; column-gap: $spacing; flex-wrap: wrap;
     @include media-max(sm){}
     @include media-max(xs){column-gap: $spacing/2;}
