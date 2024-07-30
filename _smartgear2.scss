@@ -145,6 +145,9 @@ video{max-width: 100%;}
       background-color: footer(background);
       a{color: contrastFW(link(font-color),footer(background));
         &:hover{color: contrastFW(link(font-color-hover),footer(background));}
+        &:is([class*=btn]){color: var(--btn-font-color);
+          &:hover{color: var(--btn-font-color);}
+        }
       }
     }
     @if footer(font-color){color: footer(font-color); }
@@ -248,7 +251,7 @@ label+.error{font-size: 0.7em; margin-bottom: 0.5em;}
   &:not(.d-grid){display: flex;flex-wrap: wrap;}
   .block-card{padding: 0;}
   .block-card__title{@extend .h2;}
-  .block-card__content{justify-content: center;}
+  // .block-card__content{justify-content: center;}
   +*:not([class*=m-top]):not([class*=m-y]){margin-top: $spacing;}
 }
 .block-card__figure .block-card__headline{position: absolute;bottom: 0; width: 100%; z-index: 1; margin: 0 !important;}
