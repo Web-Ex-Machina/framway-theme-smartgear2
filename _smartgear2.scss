@@ -400,6 +400,7 @@ table.calendar{ table-layout: fixed;
   .sliderFW:not(.m-bottom-0) + &,
   .heroFW:not(.m-bottom-0)   + &{margin-top: -$spacing;}
   .mod_article &:not(:last-child){margin-bottom: $spacing;}
+  .container &.container{padding-inline: 0;}
 }
 
 // PAGINATION
