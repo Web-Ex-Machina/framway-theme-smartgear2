@@ -378,7 +378,11 @@ table.calendar{ table-layout: fixed;
 .reader__headline{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; position: relative; margin-bottom: 0.5em;}
 .reader__author,
 .reader__time{font-size: 0.85em;opacity: 0.6;}
-.reader__picture{max-height: 50vh; margin-bottom: 1em;}
+.reader__picture{max-height: 50vh; margin-bottom: 1em;
+  &:is(.img-container){
+    >figure{display: contents;}
+  }
+}
 .reader__text{margin-top: 2em;margin-bottom: 3em;
   +.reader__author{margin-top: -1.75em;}
 }
