@@ -82,7 +82,7 @@ ol, p, ul{margin-bottom: 1rem;}
 .ce_text[class*="bg-"]{@extend .block-std !optional;
   &:not([class*=m-bottom]):not([class*=m-y]){margin-bottom: 0;}
   @each $key, $value in $colors{
-    &.bg-#{$key}{background-color: $value;}
+    &.bg-#{$key}{background-color: rgba($value,var(--bg-opacity));}
   }
 }
 
