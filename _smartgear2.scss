@@ -69,7 +69,7 @@ ol, p, ul{margin-bottom: 1rem;}
 .float_left{float: left;}
 
 .ce_text{clear: both;
-  .ce_text+&{
+  .ce_text+&:not([class*=bg-]){
     @for $index from 1 through 6{
       h#{$index}, .h#{$index}{
         &:first-child{
