@@ -466,6 +466,10 @@ table.calendar{ table-layout: fixed;
   &:before {content: "“";top: 0;left: 0;transform: translateY(0.5ch); }
   &:after  {content: "”";bottom: 0;right: 0;transform: translateY(0.35ch); }
   &.bg-none{background: none; box-shadow: none;}
+  &.no-quotes{
+    &:before,
+    &:after {content: none;}
+  }
 }
 .quote__content{ display: flex; align-items: center;
   flex-grow: 1; 
