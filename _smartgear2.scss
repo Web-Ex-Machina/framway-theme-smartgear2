@@ -748,11 +748,18 @@ $logoSpace : clamp(3em,6vw,130px) !default;
 }
 .audiotrack__title{}
 .audiotrack__actions{flex-basis: 100%; display: flex; gap: 1em; align-items: center; margin-top: auto;}
-.audiotrack__play{display: block;position: relative;background: $primary; color:body(background); width: 2em; height: 2em; border-radius: 100%; transition: all 0.4s; display: flex; align-items: center;justify-content: center; cursor: pointer; opacity: 0.8;
+.audiotrack__button{display: block;position: relative;background: $primary; color:body(background); width: 2em; height: 2em; border-radius: 100%; transition: all 0.4s; display: flex; align-items: center;justify-content: center; cursor: pointer; opacity: 0.8;
+  a{color: inherit; text-decoration: none;}
+  &:hover{opacity: 1;}
+  &+.audiotrack__button{margin-left: -0.5em;}
+}
+.audiotrack__download{
+  .fa-download {transform: translateY(-15%);}
+}
+.audiotrack__play{
   .fa-play {transform: translateX(15%);}
   &:not(.playing) .fa-pause{display: none;}
   &.playing       .fa-play {display: none;}
-  &:hover{opacity: 1;}
 }
 .audiotrack__duration{flex-grow: 1;}
 .audiotrack__footer{flex-basis: 15%;min-width: 200px; display: flex; flex-wrap: wrap; gap: 2em; justify-content: space-between;
