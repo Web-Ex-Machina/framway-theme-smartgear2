@@ -438,8 +438,8 @@ table.calendar{ table-layout: fixed;
     align-items: center;
     text-decoration: none;
     &:hover{text-decoration: none;color: inherit;
-      @if lightness($primary)>60{background: scale-color(btn(background),$lightness:-15); }
-      @else{background: scale-color(btn(background),$lightness:15); }
+      @if lightness($primary)>60{background: scale-color(btn(background),$lightness:-15%); }
+      @else{background: scale-color(btn(background),$lightness:15%); }
     }
     &+[class*=share-buttons__btn]{margin-left: 0.25em;}
   }
