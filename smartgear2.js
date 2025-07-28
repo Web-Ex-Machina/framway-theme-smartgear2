@@ -3,6 +3,15 @@ app.labels.errors.inputs.passwordMatch = {
     en: 'Passwords do not match'
 }
 
+document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+
+let viewportPaddingTop = 0;
+if (document.querySelector('.headerFW '))
+    viewportPaddingTop += parseInt(window.getComputedStyle(document.querySelector('.headerFW ')).height );
+if (document.querySelector('.mod_breadcrumb '))
+    viewportPaddingTop += parseInt(window.getComputedStyle(document.querySelector('.mod_breadcrumb ')).height );
+viewportPaddingTop += 'px';
+document.documentElement.style.setProperty('--viewport-padding-top',viewportPaddingTop );
 
 $(function () {
   // INIT
