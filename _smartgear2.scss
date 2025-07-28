@@ -79,7 +79,9 @@ ol, p, ul{margin-bottom: 1rem;}
 .float_right{float: right;}
 .float_left{float: left;}
 
+.content-text,
 .ce_text{clear: both;
+  .content-text+&:not([class*=bg-]),
   .ce_text+&:not([class*=bg-]){
     @for $index from 1 through 6{
       h#{$index}, .h#{$index}{
@@ -90,6 +92,7 @@ ol, p, ul{margin-bottom: 1rem;}
     }
   }
 }
+.content-text[class*="bg-"],
 .ce_text[class*="bg-"]{@extend .block-std !optional;
   &:not([class*=m-bottom]):not([class*=m-y]){margin-bottom: 0;}
   @each $key, $value in $colors{
@@ -113,7 +116,9 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
 .ce_player figure,
 .ce_image figure,
 .ce_youtube figure{margin: 0; height: 100%; width: 100%;}
+.content-text figure,
 .ce_text figure{
+  margin-bottom: 1rem;
   &.float_right,
   &.float_left{ margin: 0 1rem 1rem 0;
     @include media-max(xs){margin: 0 0 1rem; width: 100%;
@@ -122,6 +127,7 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
   }
   &.float_right{ margin: 0 0 1rem 1rem;}
 }
+.ce_image:not(.float_right,.float_left,.fl-right,.fl-left)+.content-text,
 .ce_image:not(.float_right,.float_left,.fl-right,.fl-left)+.ce_text{margin-top: 1rem;}
 
 video{max-width: 100%;}
@@ -140,6 +146,7 @@ video{max-width: 100%;}
     }
   }
 }
+[class*=bg-]:not([class*=bg--]):not([class*=btn-]) .content-text:last-child>p:last-child,
 [class*=bg-]:not([class*=bg--]):not([class*=btn-]) .ce_text:last-child>p:last-child{margin-bottom: 0;}
 
 
