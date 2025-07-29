@@ -114,6 +114,7 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
 .img-container figcaption{position: absolute; bottom: 0;width: 100%;text-align: center; background: rgba($primary,0.3);color: white; text-shadow: 1px 1px 5px rgba(0,0,0,0.9); }
 
 .ce_player figure,
+.content-image figure,
 .ce_image figure,
 .ce_youtube figure{margin: 0; height: 100%; width: 100%;}
 .content-text figure,
@@ -127,8 +128,11 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
   }
   &.float_right{ margin: 0 0 1rem 1rem;}
 }
-.ce_image:not(.float_right,.float_left,.fl-right,.fl-left)+.content-text,
-.ce_image:not(.float_right,.float_left,.fl-right,.fl-left)+.ce_text{margin-top: 1rem;}
+.ce_image:not(.float_right,.float_left,.fl-right,.fl-left),
+.content-image:not(.float_right,.float_left,.fl-right,.fl-left){
+  +.content-text,
+  +.ce_text{margin-top: 1rem;}
+}
 
 video{max-width: 100%;}
 
