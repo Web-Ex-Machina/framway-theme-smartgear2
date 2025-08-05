@@ -205,7 +205,16 @@ label+.error{font-size: 0.7em; margin-bottom: 0.5em;}
 
 
 // GRIDS
-.d-grid{}
+.d-grid{
+  .ce_text,.content-text{
+    +.ce_text,
+    +.content-text{
+      &:not([class*=bg-]){
+        *:is(h1,h2,h3,h4,h5,h6):first-child{margin-top: 0;}
+      }
+    }
+  }
+}
 .item-grid{
   &>*:last-child:not([class*=m-bottom]){margin-bottom: 0 !important;}
   &>.block-card{height: 100%;}
