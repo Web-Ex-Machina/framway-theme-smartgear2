@@ -78,6 +78,7 @@ $(function () {
         var item = $(el);
         item.attr('data-lightbox',item.attr('data-lightbox')!=""?item.attr('data-lightbox'):utils.uniqid());
         item.attr('data-modal',item.attr('data-lightbox'));
+        item.attr('data-autoload',false);
         if ($('a[data-lightbox='+item.attr('data-lightbox')+']').length > 1) {
             $('a[data-lightbox='+item.attr('data-lightbox')+']').each(function(i){
                 $(this).attr('data-gallery',$(this).attr('data-lightbox'));
