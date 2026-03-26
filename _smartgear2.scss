@@ -292,6 +292,22 @@ $masonry-gap : $spacing;
   >.flex-column{display: contents;}
 }
 
+$arrow-w: 100px;
+.sliderFW.block-card__slider{
+  &[data-arrows=true]{
+    padding: 0 $arrow-w;
+    inset: 0 0 0 50%;
+    transform: translateX(-50%);
+    width: calc(100% + $arrow-w*2);
+    max-width: 100vw;
+  }
+  .sliderFW__item{padding: 0 5px; min-width: fit-content;}
+  .sliderFW__item__bg{height: 0;}
+  .sliderFW__item__content{align-items: normal; position: relative;}
+  .block-card__container{padding: 0 !important;}
+  .block-card{margin-bottom: 5px; margin-top: 5px; min-width: var(--griditem-minwidth);}
+}
+
 // BLOCK-LIST - DEFAULT
 .block-list{flex-basis: 33.33%; flex-grow: 1; max-width: 100%; order: 1;  margin-bottom: 0;
   & .ribbon{position: absolute; right: 0; top: 0; z-index: 2;transform-origin: 100% 100%; transform: translateX(0) translateY(3.35em) rotate(45deg); height: 2.3em; background: color(white); width: 8em; text-align: center; box-shadow: 1px 5px 10px rgba(0,0,0,0.5);
