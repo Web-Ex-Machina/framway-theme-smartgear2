@@ -133,7 +133,9 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
 .ce_image:not(.float_right,.float_left,.fl-right,.fl-left),
 .content-image:not(.float_right,.float_left,.fl-right,.fl-left){
   +.content-text,
-  +.ce_text{margin-top: 1rem;}
+  +.ce_text{margin-top: 1rem;
+    .d-grid>&{margin-top: 0;}
+  }
 }
 
 video{max-width: 100%;}
