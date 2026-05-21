@@ -493,6 +493,12 @@ table.calendar{ table-layout: fixed;
   @include media-max(xs){margin-top: 3em;} 
 }
 
+.reader__list{@include grid($autocols:auto-fill,$gap:$spacing); }
+.reader__list__item{display: grid; grid-template-columns: 100%; grid-auto-rows: 1fr; gap: 1em;}
+.reader__list__item__line{
+  i[class*=fa],svg{margin-right: 0.5em;}
+}
+
 // BREADCRUMB
 .mod_breadcrumb{ padding-top: 0.5em; padding-bottom: 0.5em; opacity: 0.3; transition: opacity 0.4s; 
   &:hover{opacity: 1;}
