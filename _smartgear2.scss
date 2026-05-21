@@ -308,7 +308,7 @@ $arrow-w: 100px;
   .sliderFW__item__bg{height: 0;}
   .sliderFW__item__content{align-items: normal; position: relative;}
   .block-card__container{padding: 0 !important;}
-  .block-card{margin-bottom: 5px; margin-top: 5px; min-width: var(--griditem-minwidth);}
+  .block-card{margin-bottom: 5px; margin-top: 5px; min-width: var(--griditem-minwidth); min-width: 0;}
 }
 
 // BLOCK-LIST - DEFAULT
