@@ -302,14 +302,20 @@ $masonry-gap : $spacing;
   >.flex-column{display: contents;}
 }
 
-$arrow-w: 100px;
 .sliderFW.block-card__slider{
+  --arrow-w: 100px;
+  @include media-max(xs){
+    --arrow-w: 50px;
+  }
   &[data-arrows=true]{
-    padding: 0 $arrow-w;
+    padding: 0 var(--arrow-w);
     inset: 0 0 0 50%;
     transform: translateX(-50%);
-    width: calc(100% + $arrow-w*2);
+    width: calc(100% + var(--arrow-w)*2);
     max-width: 100vw;
+    .sliderFW__arrow{
+      width: var(--arrow-w);
+    }
   }
   .sliderFW__item{padding: 0 5px; min-width: fit-content;}
   .sliderFW__item__bg{height: 0;}
