@@ -8,8 +8,6 @@ $z_header: 100 !default;
     --mod_article-padding-y: #{$spacing/2};
     --mod_article-margin-bottom: #{$spacing/2};
   }
-
-  --theme: var(--primary);
 }
 
 #wrapper {min-height: 100vh; @include flex-container(column); position: relative;}
