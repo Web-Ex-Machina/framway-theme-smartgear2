@@ -135,6 +135,25 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
   }
   &.float_right{ margin: 0 0 1rem 1rem;}
 }
+.content-text{
+  &.media{
+    >figure{
+      @include media-max(xs){margin: 0 0 1rem; width: 100%;
+        figcaption{text-align: left;}
+      }
+    }
+    &:after{content: ""; display: block; width: 100%; height: 0px; clear: both;}
+  }
+  &.media--right{
+    >figure{float:right; margin: 0 0 1rem 1rem;}
+  }
+  &.media--left {
+    >figure{float:left; margin: 0 1rem 1rem 0;}
+  }
+  &.media-above{}
+  &.media-below{}
+}
+
 .ce_image:not(.float_right,.float_left,.fl-right,.fl-left),
 .content-image:not(.float_right,.float_left,.fl-right,.fl-left){
   +.content-text,
