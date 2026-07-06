@@ -3,6 +3,11 @@ app.labels.errors.inputs.passwordMatch = {
     en: 'Passwords do not match'
 }
 
+document.querySelectorAll('[class*=cssvar--]').forEach((el)=>{
+    let prop = el.classList.value.match(/cssvar\S+/gm)[0].replace('cssvar--','').split('--');
+    el.style.setProperty('--'+prop[0], prop[1]);
+})
+
 document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
 
 let viewportPaddingTop = 0;
