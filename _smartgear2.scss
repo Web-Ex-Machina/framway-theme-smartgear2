@@ -1,7 +1,7 @@
 $z_header: 100 !default;
 
 :root{
-  --mod_article-padding-y: #{$spacing};
+  --mod_article-padding-y: #{$spacing * 2};
   --mod_article-padding-x: 0;
   --mod_article-margin-bottom: #{$spacing};
   @include media-max(xs){
