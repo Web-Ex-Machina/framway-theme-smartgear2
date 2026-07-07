@@ -27,8 +27,8 @@ $z_header: 100 !default;
   }
 }
 
-.tag{background: var(--primary); color: #fff; padding: 0.35em 1em 0.45em; border-radius: 50px; font-weight: 700; display: inline-block; white-space: nowrap;
-  &.bg-theme{background: var(--theme);}
+.tag{background: var(--primary); color: var(--primary-font); padding: 0.35em 1em 0.45em; border-radius: 50px; font-weight: 700; display: inline-block; white-space: nowrap;
+  &.bg-theme{background: var(--theme); color: var(--theme-font);}
   &.bd-theme{background: none; border: 1px solid var(--theme); color: var(--theme);}
 }
 
