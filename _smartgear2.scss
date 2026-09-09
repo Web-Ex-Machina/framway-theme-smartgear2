@@ -316,6 +316,9 @@ $masonry-gap : $spacing;
       }
     }
   }
+  &.grid-minmax{
+    ul{display: contents;}
+  }
 }
 
 // BLOCK-CARD
