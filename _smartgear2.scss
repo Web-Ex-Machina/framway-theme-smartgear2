@@ -164,7 +164,11 @@ figcaption{font-style: italic; font-size: 0.8em; text-align: center;}
 
 video{max-width: 100%;}
 
-.mod_article{margin-bottom: var(--mod_article-margin-bottom); padding: var(--mod_article-padding-y) var(--mod_article-padding-x); @extend .neutral !optional;
+.mod_article{
+  margin-bottom: var(--mod_article-margin-bottom); 
+  padding-block: var(--mod_article-padding-y);
+  padding-inline: var(--mod_article-padding-x); 
+  @extend .neutral !optional;
   @include lastChildNoMargin();
   .modalFW &.first{padding-top: 0;}
   .modalFW &.last{padding-bottom: 0;}
